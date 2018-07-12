@@ -1,6 +1,6 @@
 FROM centos:latest
 MAINTAINER ruansheng <825307513@qq.com>
-RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel libxml2-devel m4 autoconf
+RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel curl-devel libxml2-devel m4 autoconf
 ADD http://ca1.php.net/distributions/php-7.2.6.tar.gz .
 RUN tar zxvf php-7.2.6.tar.gz
 RUN mkdir -p /usr/local/php7
