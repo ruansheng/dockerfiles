@@ -1,6 +1,14 @@
 FROM centos:latest
 MAINTAINER ruansheng <825307513@qq.com>
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel curl-devel libxml2-devel m4 autoconf
+
+# install supervisor
+RUN yum -y install python-setuptools 
+RUN easy_install supervisor
+RUN echo_supervisord_conf > /etc/supervisord.conf
+RUN mkdir /etc/supervisord
+RUN sed -i 's/;files = relative\/directory\/*.ini/files = \/etc/supervisord\/*.ini'
+
 ADD http://ca1.php.net/distributions/php-7.2.6.tar.gz .
 RUN tar zxvf php-7.2.6.tar.gz
 RUN mkdir -p /usr/local/php7
