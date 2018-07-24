@@ -1,6 +1,8 @@
 FROM centos
 MAINTAINER ruansheng 825307513@qq.com
 
+RUN /usr/bin/cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel
 
 ADD http://nginx.org/download/nginx-1.15.0.tar.gz .
