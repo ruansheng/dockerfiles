@@ -2,6 +2,8 @@ FROM centos:latest
 MAINTAINER ruansheng <825307513@qq.com>
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel curl-devel libxml2-devel m4 autoconf
 
+RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 # install supervisor
 RUN yum install epel-release -y
 RUN yum install supervisor -y
