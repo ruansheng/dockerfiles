@@ -13,5 +13,4 @@ RUN rm -fv /usr/local/nginx/conf/nginx.conf
 RUN mkdir -p /usr/local/nginx/conf/server
 COPY proxy_pass.conf /usr/local/nginx/conf/server/proxy_pass.conf
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
-EXPOSE 80
 # CMD /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
