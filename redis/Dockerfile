@@ -9,4 +9,4 @@ ADD http://download.redis.io/releases/redis-3.2.9.tar.gz .
 RUN tar zxvf redis-3.2.9.tar.gz
 RUN mv redis-3.2.9 /usr/local/redis && \
 cd /usr/local/redis && make
-EXPOSE 6379
+
