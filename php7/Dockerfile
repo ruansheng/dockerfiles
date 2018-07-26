@@ -1,14 +1,7 @@
-FROM centos:latest
+FROM ccr.ccs.tencentyun.com/ruan.sheng/base
 MAINTAINER ruansheng <825307513@qq.com>
+
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel curl-devel libxml2-devel m4 autoconf
-
-RUN /usr/bin/cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-# install supervisor
-RUN yum install epel-release -y
-RUN yum install supervisor -y
-RUN mkdir -p /var/log/supervisor
-RUN sed -i "s/nodaemon=false/nodaemon=true/g" /etc/supervisord.conf
 
 ADD http://ca1.php.net/distributions/php-7.2.6.tar.gz .
 RUN tar zxvf php-7.2.6.tar.gz
