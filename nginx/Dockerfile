@@ -9,5 +9,5 @@ RUN mkdir -p /usr/local/nginx
 RUN cd nginx-1.15.0 && ./configure --prefix=/usr/local/nginx && make && make install
 RUN rm -fv /usr/local/nginx/conf/nginx.conf
 RUN mkdir -p /usr/local/nginx/conf/server
-COPY proxy_pass.conf /usr/local/nginx/conf/server/proxy_pass.conf
+COPY test.conf /usr/local/nginx/conf/server/test.conf
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
