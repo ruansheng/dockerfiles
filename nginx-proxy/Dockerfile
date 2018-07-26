@@ -1,4 +1,4 @@
-FROM ccr.ccs.tencentyun.com/ruan.sheng/base
+FROM ccr.ccs.tencentyun.com/ruan.sheng/base-centos
 MAINTAINER ruansheng 825307513@qq.com
 
 RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel
