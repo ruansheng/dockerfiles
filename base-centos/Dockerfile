@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:6
 MAINTAINER ruansheng 825307513@qq.com
 
 # set time zone
