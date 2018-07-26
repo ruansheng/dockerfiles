@@ -2,7 +2,7 @@ FROM centos
 MAINTAINER ruansheng 825307513@qq.com
 
 # set time zone
-#RUN /usr/bin/cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN /usr/bin/cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # install supervisor
 RUN yum -y install epel-release
