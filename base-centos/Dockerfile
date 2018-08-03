@@ -23,4 +23,4 @@ RUN yum -y install net-tools
 RUN yum -y install strace
 
 # install make
-RUN yum -y install make m4 autoconf
+RUN yum -y install gcc make m4 autoconf
