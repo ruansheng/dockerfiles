@@ -7,3 +7,4 @@ RUN tar zxvf haproxy-1.8.12.tar.gz
 
 RUN mkdir -p /usr/local/haproxy
 RUN cd haproxy-1.8.12 && make  TARGET=linux3100 CPU=x86_64 PREFIX=/usr/local/haproxy && make install PREFIX=/usr/local/haproxy
+COPY haproxy.cfg /usr/local/haproxy/haproxy.cfg
