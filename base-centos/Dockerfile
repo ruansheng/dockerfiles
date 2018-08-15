@@ -11,7 +11,7 @@ RUN mkdir -p /var/log/supervisor
 RUN sed -i "s/nodaemon=false/nodaemon=true/g" /etc/supervisord.conf
 
 # install vim
-RUN yum -y install vim
+RUN yum -y install vim git
 
 # install tcpdump
 RUN yum -y install tcpdump
