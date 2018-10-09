@@ -21,3 +21,5 @@ RUN /usr/local/php7/bin/pecl install mongodb
 RUN sed -i '$a extension=mongodb.so' /usr/local/php7/lib/php.ini
 
 ENV PATH /usr/local/php7/bin:$PATH
+
+RUN wget https://dl.laravel-china.org/composer.phar -O /usr/local/bin/composer && chmod a+x /usr/local/bin/composer
