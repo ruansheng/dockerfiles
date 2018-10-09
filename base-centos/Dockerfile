@@ -24,3 +24,6 @@ RUN yum -y install strace
 
 # install make
 RUN yum -y install gcc gcc-c++ make m4 autoconf
+
+## install zip unzip
+RUN yum -y install zip unzip
