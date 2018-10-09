@@ -11,3 +11,5 @@ RUN rm -fv /usr/local/nginx/conf/nginx.conf
 RUN mkdir -p /usr/local/nginx/conf/server
 COPY test.conf /usr/local/nginx/conf/server/test.conf
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
+
+ENV PATH /usr/local/nginx/sbin:$PATH
