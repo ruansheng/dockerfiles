@@ -19,3 +19,5 @@ RUN sed -i '$a extension=redis.so' /usr/local/php7/lib/php.ini
 
 RUN /usr/local/php7/bin/pecl install mongodb
 RUN sed -i '$a extension=mongodb.so' /usr/local/php7/lib/php.ini
+
+ENV PATH /usr/local/php7/bin:$PATH
