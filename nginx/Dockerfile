@@ -1,7 +1,7 @@
 FROM ccr.ccs.tencentyun.com/ruan.sheng/base-centos:latest
 MAINTAINER ruansheng 825307513@qq.com
 
-RUN yum install -y pcre-devel wget net-tools gcc zlib zlib-devel make openssl-devel
+RUN yum install -y pcre-devel    wget net-tools gcc zlib zlib-devel make openssl-devel
 
 ADD http://nginx.org/download/nginx-1.15.0.tar.gz .
 RUN tar zxvf nginx-1.15.0.tar.gz
